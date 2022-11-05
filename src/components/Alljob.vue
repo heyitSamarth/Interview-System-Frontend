@@ -30,11 +30,11 @@ export default {
         async deleteJob(job) {
             try {
                let  responce = await this.$http.delete(`job/deletejob/${job._id}`);
-                console.log(responce)
                 this.getDetails()
+                console.log(responce)
             } catch (err) {
 
-                console.log(err.response);
+                console.log(err);
             }
         },
 
